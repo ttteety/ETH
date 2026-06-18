@@ -5,3 +5,7 @@
 -- select 
 -- {{ dbt_utils.star(from = ref('stg_transactions_enriched'), except=['new_field', 'hash'], quote_identifiers=False, prefix='stg_')}}
 -- from {{ ref('stg_transactions_enriched')}}
+
+-- {{ audit_helper.compare_relations(source('eth', 'contracts'), source('eth', 'contracts_clone')) }}
+
+-- {{ codegen.generate_model_yaml(['stablecoin_activity_per_day']) }}
