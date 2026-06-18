@@ -12,7 +12,7 @@ models:
           - unique
           - not_null
   - name: stablecoin_activity_per_day
-    latest_version: 1
+    latest_version: 2
     config:
       contract:
         enforced: true
